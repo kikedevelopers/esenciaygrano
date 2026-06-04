@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import { Menu, X } from '@lucide/svelte';
+	import logo from '$lib/assets/logo.png';
 
 	let scrolled = $state(false);
 	let menuOpen = $state(false);
@@ -30,7 +31,7 @@
 			<span
 				class="grid size-11 shrink-0 place-items-center rounded-full bg-white p-1 shadow-sm ring-1 ring-black/5"
 			>
-				<img src="/logo.png" alt="Esencia & Grano" class="h-full w-full object-contain" />
+				<img src={logo} alt="Esencia & Grano" class="h-full w-full object-contain" />
 			</span>
 			<span class="flex flex-col leading-none">
 				<span

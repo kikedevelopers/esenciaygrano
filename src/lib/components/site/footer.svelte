@@ -1,4 +1,6 @@
 <script lang="ts">
+	import logo from '$lib/assets/logo.png';
+
 	const links = [
 		{ label: 'Catálogo', href: '#categorias' },
 		{ label: 'Nuestra esencia', href: '#esencia' },
@@ -14,7 +16,7 @@
 		<div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
 			<div class="max-w-sm">
 				<div class="flex items-center gap-3">
-					<img src="/logo.png" alt="Esencia & Grano" class="h-12 w-12 object-contain" />
+					<img src={logo} alt="Esencia & Grano" class="h-12 w-12 object-contain" />
 					<div class="leading-none">
 						<p class="font-serif text-lg font-semibold">
 							Esencia <span class="text-magenta">&</span> Grano

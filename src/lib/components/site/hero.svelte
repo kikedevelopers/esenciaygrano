@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import { ArrowRight, MapPin, Sparkles } from '@lucide/svelte';
+	import logo from '$lib/assets/logo.png';
 </script>
 
 <section id="inicio" class="surface-aubergine relative overflow-hidden text-white">
@@ -87,7 +88,7 @@
 				class="relative grid aspect-square w-full place-items-center rounded-full border border-white/15 bg-[radial-gradient(circle_at_50%_35%,#ffffff_0%,#faf6ff_70%,#f3ecff_100%)] p-7 shadow-2xl shadow-black/40 ring-1 ring-white/10 sm:p-10"
 			>
 				<img
-					src="/logo.png"
+					src={logo}
 					alt="Logotipo de Esencia & Grano"
 					class="h-full w-full object-contain drop-shadow-sm"
 				/>
