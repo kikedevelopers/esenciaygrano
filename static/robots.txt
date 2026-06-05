@@ -1,3 +1,5 @@
-# allow crawling everything by default
+# Esencia & Grano — permitir rastreo completo
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://esenciaygrano.com/sitemap.xml

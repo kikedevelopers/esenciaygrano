@@ -9,6 +9,7 @@
 		{ label: 'Visítanos', href: '#visitanos' }
 	];
 	const year = 2026;
+	const phone = '3015955518';
 </script>
 
 <footer class="border-t border-border bg-secondary/40">
@@ -42,6 +43,35 @@
 					</a>
 				{/each}
 			</nav>
+
+			<address class="flex flex-col gap-3 not-italic">
+				<p class="text-xs font-semibold tracking-[0.18em] text-muted-foreground uppercase">
+					Contacto
+				</p>
+				<a
+					href="https://www.google.com/maps/search/?api=1&query=Plaza+de+la+21+Ibagu%C3%A9+Tolima"
+					target="_blank"
+					rel="noopener"
+					class="text-sm text-foreground/80 transition-colors hover:text-primary"
+				>
+					Plaza de la 21, Ibagué – Tolima
+				</a>
+				<a
+					href={`tel:+57${phone}`}
+					class="text-sm text-foreground/80 transition-colors hover:text-primary"
+				>
+					301 595 5518
+				</a>
+				<a
+					href={`https://wa.me/57${phone}`}
+					target="_blank"
+					rel="noopener"
+					class="text-sm text-foreground/80 transition-colors hover:text-primary"
+				>
+					Escríbenos por WhatsApp
+				</a>
+				<p class="text-sm text-muted-foreground">Lun a Sáb · 8:00 – 20:00</p>
+			</address>
 		</div>
 
 		<div

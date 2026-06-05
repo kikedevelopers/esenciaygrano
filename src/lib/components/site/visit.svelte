@@ -3,10 +3,18 @@
 	import { reveal } from '$lib/actions/reveal';
 	import { MapPin, Clock, Phone, ArrowRight } from '@lucide/svelte';
 
+	const phone = '3015955518';
+	const whatsappUrl = `https://wa.me/57${phone}?text=${encodeURIComponent('Hola, quiero hacer un pedido en Esencia & Grano 🌿')}`;
+
 	const info = [
-		{ icon: MapPin, label: 'Dónde estamos', value: 'La Despensa de la 21' },
+		{
+			icon: MapPin,
+			label: 'Dónde estamos',
+			value: 'Plaza de la 21, Ibagué – Tolima',
+			href: 'https://www.google.com/maps/search/?api=1&query=Plaza+de+la+21+Ibagu%C3%A9+Tolima'
+		},
 		{ icon: Clock, label: 'Horario', value: 'Lun a Sáb · 8:00 – 20:00' },
-		{ icon: Phone, label: 'Contacto', value: 'Escríbenos por WhatsApp' }
+		{ icon: Phone, label: 'Contacto', value: '301 595 5518', href: `tel:+57${phone}` }
 	];
 </script>
 
@@ -31,7 +39,9 @@
 				</p>
 				<div class="mt-8 flex flex-wrap gap-3">
 					<Button
-						href="#inicio"
+						href={whatsappUrl}
+						target="_blank"
+						rel="noopener"
 						size="lg"
 						class="group h-12 rounded-full bg-gold px-6 text-base text-gold-foreground hover:bg-gold/90"
 					>
@@ -44,7 +54,13 @@
 			<div class="grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10">
 				{#each info as item (item.label)}
 					{@const Icon = item.icon}
-					<div class="flex items-center gap-4 bg-white/[0.03] px-6 py-5 backdrop-blur-sm">
+					<svelte:element
+						this={item.href ? 'a' : 'div'}
+						href={item.href}
+						target={item.href?.startsWith('http') ? '_blank' : undefined}
+						rel={item.href?.startsWith('http') ? 'noopener' : undefined}
+						class="flex items-center gap-4 bg-white/[0.03] px-6 py-5 backdrop-blur-sm transition-colors hover:bg-white/[0.07]"
+					>
 						<span class="grid size-11 shrink-0 place-items-center rounded-full bg-white/10 text-gold">
 							<Icon class="size-5" />
 						</span>
@@ -52,7 +68,7 @@
 							<p class="text-xs tracking-wide text-white/55 uppercase">{item.label}</p>
 							<p class="mt-0.5 font-medium">{item.value}</p>
 						</div>
-					</div>
+					</svelte:element>
 				{/each}
 			</div>
 		</div>
