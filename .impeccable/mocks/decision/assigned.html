@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{font-family:'Hanken Grotesk',sans-serif;color:#f6efe4;background:radial-gradient(90% 80% at 75% 45%,#3a1452 0%,#1a0b24 65%)}
+  nav{position:absolute;inset:0 0 auto 0;height:84px;display:flex;align-items:center;justify-content:space-between;padding:0 72px}
+  .brand{font-family:'Bodoni Moda';font-size:22px;display:flex;gap:14px;align-items:center}
+  .dot{width:42px;height:42px;border-radius:50%;background:#f6efe4;outline:1px solid #e2a93b;outline-offset:3px}
+  .links{display:flex;gap:34px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#cdb7dd}
+  .copy{position:absolute;left:72px;top:200px;width:560px}
+  h1{font-family:'Bodoni Moda';font-weight:500;font-size:104px;line-height:.95;letter-spacing:-.025em}
+  h1 span{color:#e2a93b}
+  .lede{margin-top:30px;font-size:20px;line-height:1.55;color:#d7c6e4;max-width:460px}
+  .cta{margin-top:42px;display:flex;gap:22px;align-items:center}
+  .medal{height:62px;padding:0 30px;border-radius:999px;display:inline-flex;align-items:center;background:#e2a93b;color:#1a0b24;font-weight:600;font-size:17px;box-shadow:0 16px 30px -14px #000}
+  .more{font-size:15px;border-bottom:1px solid #e2a93b80;padding-bottom:4px}
+  .arch{position:absolute;right:80px;top:110px;width:600px;height:720px;border-radius:300px 300px 0 0;overflow:hidden;
+    background:#100616;outline:10px solid #241030;box-shadow:0 50px 90px -40px #000}
+  .grid{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1.4fr 1fr;grid-template-rows:1.2fr 1fr 1fr;gap:8px;padding:8px}
+  .pane{position:relative;border-radius:4px;opacity:.92}
+  .p1{background:linear-gradient(160deg,#7a2bb0,#3d145c)}
+  .p2{background:linear-gradient(200deg,#f0c35e,#b97a1d);grid-row:span 2}
+  .p3{background:linear-gradient(160deg,#d81b7a,#7d0c45)}
+  .p4{background:linear-gradient(160deg,#4a1a6b,#28103a)}
+  .p5{background:linear-gradient(160deg,#6c8a33,#2f4214)}
+  .p6{background:linear-gradient(160deg,#5b1f86,#2e0f45)}
+  .p7{background:linear-gradient(200deg,#c4166e,#5c0a33)}
+  .p8{background:linear-gradient(160deg,#e2a93b,#8e5a12)}
+  .fan{position:absolute;left:8px;right:8px;top:8px;height:290px;border-radius:292px 292px 0 0;
+    background:repeating-conic-gradient(from 270deg at 50% 100%,#e2a93b 0 2deg,#5b1f86 2deg 20deg);opacity:.9}
+  .beam{position:absolute;left:-30%;top:0;width:60%;height:100%;background:linear-gradient(100deg,transparent,#fff3c855,transparent);transform:skewX(-14deg)}
+  .note{position:absolute;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#e2a93b;display:flex;align-items:center;gap:10px}
+  .note::before{content:"";width:64px;height:1px;background:#e2a93b}
+  .n1{right:690px;top:430px}.n2{right:690px;top:610px}
+  .note b{font-family:'Bodoni Moda';font-size:20px;letter-spacing:0;text-transform:none;color:#f6efe4;font-weight:500}
+  .meta{position:absolute;left:72px;bottom:60px;display:flex;gap:46px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#a58fb8}
+  .meta b{display:block;font-family:'Bodoni Moda';font-size:26px;letter-spacing:0;text-transform:none;color:#f6efe4;font-weight:500}
+</style>
+</head>
+<body>
+  <nav><div class="brand"><span class="dot"></span>Esencia &amp; Grano</div><div class="links"><span>La despensa</span><span>A granel</span><span>La casa</span><span>Visítanos</span></div><div class="links" style="color:#e2a93b">Pide por WhatsApp</div></nav>
+  <section class="copy">
+    <h1>La luz de <span>lo justo.</span></h1>
+    <p class="lede">Especias, granos, semillas y frutos secos a granel, servidos en la cantidad exacta. Más de 120 productos en la Plaza de la 21, Ibagué.</p>
+    <div class="cta"><span class="medal">Pide por WhatsApp</span><span class="more">Recorre el vitral</span></div>
+  </section>
+  <div class="arch"><div class="grid"><div class="pane p1"></div><div class="pane p2"></div><div class="pane p3"></div><div class="pane p4"></div><div class="pane p5"></div><div class="pane p6"></div><div class="pane p7"></div><div class="pane p8"></div></div><div class="fan"></div><div class="beam"></div></div>
+  <div class="note n1"><b>Almendra</b> Frutos secos · 250 g</div>
+  <div class="note n2"><b>Cúrcuma</b> Especias · 100 g</div>
+  <div class="meta"><div><b>+120</b>productos</div><div><b>Lun–Sáb</b>8:00 – 20:00</div><div><b>Domicilios</b>Ibagué</div></div>
+</body>
+</html>

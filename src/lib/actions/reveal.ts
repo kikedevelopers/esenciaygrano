@@ -19,8 +19,7 @@ export const reveal: Action<HTMLElement, RevealOptions | undefined> = (node, opt
 	if (delay) node.style.setProperty('--reveal-delay', `${delay}ms`);
 
 	const reduceMotion =
-		typeof window !== 'undefined' &&
-		window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 	if (reduceMotion || typeof IntersectionObserver === 'undefined') {
 		node.dataset.revealShow = '';

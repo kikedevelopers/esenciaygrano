@@ -21,3 +21,10 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Impeccable: artefactos locales (capturas, imágenes en bruto, estado de rondas y caché)
+.impeccable/review/
+.impeccable/assets-src/
+.impeccable/questions/
+.impeccable/config.local.json
+.impeccable/hook.cache.json

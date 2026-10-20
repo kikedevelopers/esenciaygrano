@@ -1,101 +1,122 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
-	import { ArrowRight, MapPin, Sparkles } from '@lucide/svelte';
-	import logo from '$lib/assets/logo.png';
+	import { ArrowDown } from '@lucide/svelte';
+	import hero_2048 from '$lib/assets/img/hero-2048.webp';
+	import hero_1280 from '$lib/assets/img/hero-1280.webp';
+	import hero_828 from '$lib/assets/img/hero-828.webp';
+	import { scroll_progress } from '$lib/actions/scroll';
+	import { default_whatsapp_message, whatsapp_url } from '$lib/site';
+	import SpiceDust from './spice-dust.svelte';
+	import WhatsappIcon from './whatsapp-icon.svelte';
+
+	const facts = [
+		{ value: '+120', label: 'productos a granel' },
+		{ value: 'Lun – Sáb', label: '8:00 a 20:00' },
+		{ value: 'Domicilios', label: 'o recoges en la 21' }
+	];
 </script>
 
-<section id="inicio" class="surface-aubergine relative overflow-hidden text-white">
-	<!-- Halos decorativos -->
-	<div
-		class="pointer-events-none absolute -top-24 -left-24 size-96 rounded-full bg-violet/30 blur-[120px]"
-		aria-hidden="true"
-	></div>
-	<div
-		class="pointer-events-none absolute -top-16 right-0 size-[28rem] rounded-full bg-magenta/30 blur-[130px]"
-		aria-hidden="true"
-	></div>
-	<div
-		class="pointer-events-none absolute top-1/4 right-1/4 size-72 rounded-full bg-violet/30 blur-[120px]"
-		aria-hidden="true"
-	></div>
+<!--
+  Hero en capítulo sticky: al hacer scroll el titular se aleja y se desvanece
+  mientras el bodegón asciende y se acerca (tres profundidades de parallax).
+-->
+<section id="inicio" class="relative h-[170svh]" use:scroll_progress={{ mode: 'sticky' }}>
+	<div class="sticky top-0 h-svh overflow-hidden bg-night">
+		<!-- Profundidad 1: la luz cálida -->
+		<div
+			class="absolute inset-0"
+			style="background: radial-gradient(55% 45% at 22% 18%, oklch(0.79 0.135 76 / 0.14), transparent 70%), radial-gradient(60% 55% at 85% 30%, oklch(0.52 0.2 302 / 0.18), transparent 70%);"
+			aria-hidden="true"
+		></div>
 
-	<div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-5 pt-32 pb-20 sm:pt-40 lg:grid-cols-[1.05fr_0.95fr] lg:pb-28">
-		<!-- Columna de texto -->
-		<div class="flex min-w-0 flex-col">
-			<span
-				class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-medium tracking-wide text-white/85 backdrop-blur-sm"
-			>
-				<Sparkles class="size-3.5 text-gold" />
-				Condimentos, granos y frutos secos
-			</span>
-
-			<h1
-				class="mt-6 max-w-xl text-4xl leading-[1.08] font-semibold tracking-tight sm:text-6xl sm:leading-[1.04] lg:text-7xl"
-			>
-				El sabor que nace
-				<span class="text-gradient-brand">de la esencia</span>
-				y del grano.
-			</h1>
-
-			<p class="mt-6 max-w-md text-lg leading-relaxed text-white/70">
-				La despensa de la 21: especias, semillas y frutos secos seleccionados a granel,
-				con la frescura y el aroma de lo auténtico.
-			</p>
-
-			<div class="mt-9 flex flex-wrap items-center gap-3">
-				<Button
-					href="#categorias"
-					size="lg"
-					class="group h-12 rounded-full bg-gold px-6 text-base text-gold-foreground shadow-lg shadow-black/20 hover:bg-gold/90"
-				>
-					Explorar catálogo
-					<ArrowRight class="size-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-				</Button>
-				<Button
-					href="#visitanos"
-					variant="outline"
-					size="lg"
-					class="h-12 rounded-full border-white/20 bg-white/5 px-6 text-base text-white hover:bg-white/10 hover:text-white"
-				>
-					<MapPin class="size-4 text-gold" />
-					Cómo llegar
-				</Button>
+		<!-- Profundidad 2: el bodegón -->
+		<div
+			class="absolute inset-x-0 bottom-0 h-[58%] sm:h-[56%] lg:h-[54%]"
+			style="transform: translate3d(0, calc(var(--progress, 0) * -9%), 0) scale(calc(1 + var(--progress, 0) * 0.12));"
+		>
+			<div class="hero-in-image h-full w-full">
+				<img
+					src={hero_1280}
+					srcset="{hero_828} 828w, {hero_1280} 1280w, {hero_2048} 2048w"
+					sizes="100vw"
+					alt="Bodegón de almendras, marañones, pistachos, nueces, arándanos, canela, anís estrellado, pimienta y quinua"
+					width="2048"
+					height="1152"
+					fetchpriority="high"
+					class="dissolve-top h-full w-full object-cover object-[50%_80%]"
+				/>
 			</div>
+			<div
+				class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-night via-night/60 to-transparent"
+				aria-hidden="true"
+			></div>
+		</div>
 
-			<dl class="mt-12 grid grid-cols-3 gap-6 border-t border-white/10 pt-8">
-				<div>
-					<dt class="font-serif text-3xl font-semibold text-white">+120</dt>
-					<dd class="mt-1 text-xs tracking-wide text-white/60 uppercase">Productos a granel</dd>
-				</div>
-				<div>
-					<dt class="font-serif text-3xl font-semibold text-white">100%</dt>
-					<dd class="mt-1 text-xs tracking-wide text-white/60 uppercase">Selección natural</dd>
-				</div>
-				<div>
-					<dt class="font-serif text-3xl font-semibold text-white">21</dt>
-					<dd class="mt-1 text-xs tracking-wide text-white/60 uppercase">Tu despensa de barrio</dd>
-				</div>
+		<!-- Velo de lectura: oscurece solo donde vive el texto -->
+		<div
+			class="absolute inset-0"
+			style="background: radial-gradient(42% 34% at 50% 40%, oklch(0.14 0.035 315 / 0.72), transparent 100%);"
+			aria-hidden="true"
+		></div>
+
+		<!-- Profundidad 3: el polvo de especias -->
+		<SpiceDust class="absolute inset-0 h-full w-full" />
+
+		<!-- Plano de lectura -->
+		<div
+			class="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-center px-5 pt-[clamp(6rem,14svh,9rem)] text-center"
+			style="opacity: calc(1 - var(--progress, 0) * 2.2); transform: translate3d(0, calc(var(--progress, 0) * -14svh), 0) scale(calc(1 - var(--progress, 0) * 0.08));"
+		>
+			<h1
+				class="text-[clamp(3.75rem,8.4vw,8.75rem)] leading-[0.9] font-[620] tracking-[-0.04em] text-ivory"
+			>
+				<span class="hero-in block" style="--step: 0">Lo justo.</span>
+				<span class="hero-in block text-gold" style="--step: 1">A granel.</span>
+			</h1>
+			<p class="hero-in type-lede mt-5 max-w-[34rem] text-ivory-dim sm:mt-6" style="--step: 2">
+				Especias, granos, semillas y frutos secos pesados a tu medida, desde 100 gramos hasta el
+				kilo. En la Plaza de la 21, Ibagué.
+			</p>
+			<div class="hero-in mt-7 flex flex-wrap items-center justify-center gap-3" style="--step: 3">
+				<a
+					href={whatsapp_url(default_whatsapp_message)}
+					target="_blank"
+					rel="noopener"
+					class="pill-gold"
+				>
+					<WhatsappIcon class="size-[1.15rem]" />
+					Pide por WhatsApp
+				</a>
+				<a href="#despensa" class="pill-ghost">Recorre la despensa</a>
+			</div>
+		</div>
+
+		<!-- Datos -->
+		<div
+			class="absolute inset-x-0 bottom-0 z-10 px-5 pb-6 sm:pb-8"
+			style="opacity: calc(1 - var(--progress, 0) * 3);"
+		>
+			<dl
+				class="hero-in mx-auto grid max-w-3xl grid-cols-3 gap-4 border-t border-night-line pt-5"
+				style="--step: 4"
+			>
+				{#each facts as fact (fact.value)}
+					<div class="flex flex-col-reverse items-center text-center">
+						<dt class="mt-1 text-xs text-ivory-mute sm:text-sm">{fact.label}</dt>
+						<dd class="text-base font-semibold tracking-[-0.02em] text-ivory sm:text-xl">
+							{fact.value}
+						</dd>
+					</div>
+				{/each}
 			</dl>
 		</div>
 
-		<!-- Columna del logotipo -->
-		<div class="relative mx-auto flex w-full max-w-md min-w-0 items-center justify-center">
-			<div
-				class="absolute inset-0 scale-110 rounded-full bg-gradient-to-tr from-violet/45 via-magenta/35 to-gold/35 blur-3xl"
-				aria-hidden="true"
-			></div>
-			<div
-				class="relative grid aspect-square w-full place-items-center rounded-full border border-white/15 bg-[radial-gradient(circle_at_50%_35%,#ffffff_0%,#faf6ff_70%,#f3ecff_100%)] p-7 shadow-2xl shadow-black/40 ring-1 ring-white/10 sm:p-10"
-			>
-				<img
-					src={logo}
-					alt="Logotipo de Esencia & Grano"
-					class="h-full w-full object-contain drop-shadow-sm"
-				/>
-			</div>
-		</div>
+		<a
+			href="#manifiesto"
+			class="absolute bottom-28 left-1/2 z-10 hidden -translate-x-1/2 text-ivory-mute sm:block"
+			style="opacity: calc(1 - var(--progress, 0) * 4);"
+			aria-label="Seguir bajando"
+		>
+			<ArrowDown class="nudge size-4" aria-hidden="true" />
+		</a>
 	</div>
-
-	<!-- Onda inferior hacia el fondo claro -->
-	<div class="h-16 bg-gradient-to-b from-transparent to-background sm:h-24"></div>
 </section>

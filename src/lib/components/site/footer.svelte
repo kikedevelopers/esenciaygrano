@@ -1,84 +1,86 @@
 <script lang="ts">
-	import logo from '$lib/assets/logo.png';
+	import logo from '$lib/assets/logo-160.webp';
+	import { address_line, opening_hours, phone_display, phone_href, whatsapp_url } from '$lib/site';
 
 	const links = [
-		{ label: 'Catálogo', href: '#categorias' },
+		{ label: 'La despensa', href: '#despensa' },
+		{ label: 'Arma tu pedido', href: '#pedido' },
 		{ label: 'Nuestra esencia', href: '#esencia' },
-		{ label: 'Beneficios', href: '#beneficios' },
 		{ label: 'Preguntas', href: '#preguntas' },
 		{ label: 'Visítanos', href: '#visitanos' }
 	];
-	const year = 2026;
-	const phone = '3015955518';
+	const year = new Date().getFullYear();
 </script>
 
-<footer class="border-t border-border bg-secondary/40">
-	<div class="mx-auto max-w-6xl px-5 py-14">
-		<div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-			<div class="max-w-sm">
-				<div class="flex items-center gap-3">
-					<img src={logo} alt="Esencia & Grano" class="h-12 w-12 object-contain" />
-					<div class="leading-none">
-						<p class="font-serif text-lg font-semibold">
-							Esencia <span class="text-magenta">&</span> Grano
-						</p>
-						<p class="mt-1 text-[0.65rem] tracking-[0.18em] text-muted-foreground uppercase">
-							La despensa de la 21
-						</p>
-					</div>
+<footer class="relative overflow-hidden bg-night pt-16 pb-28 sm:pb-12">
+	<div class="mx-auto max-w-6xl px-5">
+		<div
+			class="grid grid-cols-1 gap-10 border-t border-night-line pt-10 md:grid-cols-[1.4fr_1fr_1fr]"
+		>
+			<div class="flex items-start gap-4">
+				<span class="grid size-14 shrink-0 place-items-center rounded-full bg-ivory p-0.5">
+					<img src={logo} alt="" width="160" height="160" class="h-full w-full object-contain" />
+				</span>
+				<div>
+					<p class="text-lg font-semibold tracking-[-0.02em] text-ivory">
+						Esencia <span class="text-gold">&</span> Grano
+					</p>
+					<p class="mt-1 text-sm text-ivory-mute">La Despensa de la 21</p>
+					<p class="mt-4 max-w-xs text-sm leading-relaxed text-ivory-dim">
+						Condimentos, granos y frutos secos seleccionados a granel en Ibagué.
+					</p>
 				</div>
-				<p class="mt-5 text-sm leading-relaxed text-muted-foreground">
-					Condimentos, granos y frutos secos seleccionados a granel. El sabor auténtico
-					de tu despensa de barrio.
-				</p>
 			</div>
 
-			<nav class="flex flex-col gap-3">
-				<p class="text-xs font-semibold tracking-[0.18em] text-muted-foreground uppercase">
-					Navegación
-				</p>
-				{#each links as link (link.href)}
-					<a href={link.href} class="text-sm text-foreground/80 transition-colors hover:text-primary">
-						{link.label}
-					</a>
-				{/each}
+			<nav aria-label="Pie de página">
+				<p class="text-sm text-ivory-mute">Navegación</p>
+				<ul class="mt-3 flex flex-col">
+					{#each links as link (link.href)}
+						<li>
+							<a
+								href={link.href}
+								class="inline-block py-1.5 text-ivory-dim transition-colors duration-150 hover:text-ivory"
+								>{link.label}</a
+							>
+						</li>
+					{/each}
+				</ul>
 			</nav>
 
-			<address class="flex flex-col gap-3 not-italic">
-				<p class="text-xs font-semibold tracking-[0.18em] text-muted-foreground uppercase">
-					Contacto
-				</p>
-				<a
-					href="https://www.google.com/maps/search/?api=1&query=Plaza+de+la+21+Ibagu%C3%A9+Tolima"
-					target="_blank"
-					rel="noopener"
-					class="text-sm text-foreground/80 transition-colors hover:text-primary"
-				>
-					Plaza de la 21, Ibagué – Tolima
-				</a>
-				<a
-					href={`tel:+57${phone}`}
-					class="text-sm text-foreground/80 transition-colors hover:text-primary"
-				>
-					301 595 5518
-				</a>
-				<a
-					href={`https://wa.me/57${phone}`}
-					target="_blank"
-					rel="noopener"
-					class="text-sm text-foreground/80 transition-colors hover:text-primary"
-				>
-					Escríbenos por WhatsApp
-				</a>
-				<p class="text-sm text-muted-foreground">Lun a Sáb · 8:00 – 20:00</p>
+			<address class="not-italic">
+				<p class="text-sm text-ivory-mute">Contacto</p>
+				<ul class="mt-3 flex flex-col text-ivory-dim">
+					<li class="py-1.5">{address_line}</li>
+					<li>
+						<a href={phone_href} class="inline-block py-1.5 transition-colors hover:text-ivory"
+							>{phone_display}</a
+						>
+					</li>
+					<li>
+						<a
+							href={whatsapp_url()}
+							target="_blank"
+							rel="noopener"
+							class="inline-block py-1.5 transition-colors hover:text-ivory">WhatsApp</a
+						>
+					</li>
+					<li class="py-1.5">{opening_hours}</li>
+				</ul>
 			</address>
 		</div>
 
+		<p
+			class="mt-16 text-[clamp(2.4rem,10.6vw,9.75rem)] leading-[0.85] font-semibold tracking-[-0.04em] whitespace-nowrap text-ivory/[0.08] select-none"
+			aria-hidden="true"
+		>
+			Esencia & Grano
+		</p>
+
 		<div
-			class="mt-12 flex flex-col gap-3 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between"
+			class="mt-8 flex flex-col gap-2 text-sm text-ivory-mute sm:flex-row sm:items-center sm:justify-between"
 		>
 			<p>© {year} Esencia & Grano · La Despensa de la 21.</p>
-			<p>Hecho con esencia y buen grano.</p>
+			<p>Imágenes de producto ilustrativas.</p>
 		</div>
 	</div>
 </footer>

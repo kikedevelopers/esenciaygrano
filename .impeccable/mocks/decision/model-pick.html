@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{font-family:'Hanken Grotesk',sans-serif;color:#f4eee6;background:#2a0f3a}
+  nav{height:84px;display:flex;align-items:center;justify-content:space-between;padding:0 72px}
+  .brand{font-family:'Bodoni Moda';font-size:22px}
+  .links{display:flex;gap:32px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#cdb7dd}
+  .tray{position:absolute;left:72px;right:72px;top:110px;bottom:56px;border-radius:18px;padding:16px;
+    background:radial-gradient(120% 100% at 30% 20%,#4a1c66,#2a0f3a);box-shadow:inset 0 0 0 2px #d9a441,inset 0 20px 60px #00000080;
+    display:grid;grid-template-columns:1.6fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:14px}
+  .cell{border-radius:10px;box-shadow:inset 0 0 0 1px #d9a44199,inset 0 18px 40px #00000099;background:radial-gradient(#3f1757,#24092f)}
+  .big{grid-row:span 2;padding:56px;display:flex;flex-direction:column;justify-content:center}
+  h1{font-family:'Bodoni Moda';font-weight:500;font-size:88px;line-height:.98;letter-spacing:-.02em}
+  h1 span{color:#d9a441}
+  p{margin-top:26px;font-size:19px;line-height:1.55;color:#d7c6e4;max-width:440px}
+  .btn{margin-top:36px;align-self:flex-start;height:58px;padding:0 28px;border-radius:999px;background:#d9a441;color:#2a0f3a;font-weight:600;display:flex;align-items:center}
+  .gem{display:flex;align-items:flex-end;padding:22px;font-family:'Bodoni Moda';font-size:22px}
+  .g1{background:radial-gradient(circle at 50% 45%,#c8945a 0 22%,#3f1757 40%)}
+  .g2{background:radial-gradient(circle at 50% 45%,#e8c070 0 20%,#3f1757 40%)}
+  .g3{background:radial-gradient(circle at 50% 45%,#8a4b2a 0 22%,#3f1757 40%)}
+  .g4{background:radial-gradient(circle at 50% 45%,#6c8a33 0 20%,#3f1757 40%)}
+</style>
+</head>
+<body>
+  <nav><div class="brand">Esencia &amp; Grano</div><div class="links"><span>La despensa</span><span>A granel</span><span>La casa</span><span style="color:#d9a441">Pide por WhatsApp</span></div></nav>
+  <div class="tray">
+    <div class="cell big"><h1>Cada grano,<br><span>una joya.</span></h1><p>Especias, granos, semillas y frutos secos a granel. Más de 120 productos en la Plaza de la 21, Ibagué.</p><span class="btn">Pide por WhatsApp</span></div>
+    <div class="cell gem g1">Almendra</div><div class="cell gem g2">Quinua</div><div class="cell gem g3">Canela</div><div class="cell gem g4">Pistacho</div>
+  </div>
+</body>
+</html>

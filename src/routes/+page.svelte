@@ -1,18 +1,23 @@
 <script lang="ts">
 	import Navbar from '$lib/components/site/navbar.svelte';
 	import Hero from '$lib/components/site/hero.svelte';
-	import Categories from '$lib/components/site/categories.svelte';
-	import About from '$lib/components/site/about.svelte';
-	import Benefits from '$lib/components/site/benefits.svelte';
+	import Manifesto from '$lib/components/site/manifesto.svelte';
+	import Pantry from '$lib/components/site/pantry.svelte';
+	import Audiences from '$lib/components/site/audiences.svelte';
+	import OrderBuilder from '$lib/components/site/order-builder.svelte';
+	import Essence from '$lib/components/site/essence.svelte';
+	import Process from '$lib/components/site/process.svelte';
 	import Faq from '$lib/components/site/faq.svelte';
 	import Visit from '$lib/components/site/visit.svelte';
 	import Footer from '$lib/components/site/footer.svelte';
+	import MobileOrderBar from '$lib/components/site/mobile-order-bar.svelte';
+	import { faqs } from '$lib/faqs';
 
 	const siteUrl = 'https://esenciaygrano.com';
 	const ogImage = `${siteUrl}/og-image.png`;
 	const title = 'Esencia & Grano · Frutos secos y granos a granel en Ibagué';
 	const description =
-		'Tienda a granel en Ibagué, Plaza de la 21: condimentos, especias, granos, semillas y frutos secos frescos y seleccionados. Llévate solo lo que necesitas. Tel. 301 595 5518.';
+		'Tienda a granel en Ibagué, Plaza de la 21: condimentos, especias, granos, semillas y frutos secos frescos y seleccionados. Pide por WhatsApp a domicilio o recoge en tienda. Tel. 301 595 5518.';
 
 	// Datos estructurados (JSON-LD) para SEO local y resultados enriquecidos.
 	const jsonLd = {
@@ -57,40 +62,11 @@
 			{
 				'@type': 'FAQPage',
 				'@id': `${siteUrl}/#preguntas`,
-				mainEntity: [
-					{
-						'@type': 'Question',
-						name: '¿Puedo comprar la cantidad exacta que necesito?',
-						acceptedAnswer: {
-							'@type': 'Answer',
-							text: 'Sí. Todo se vende a granel, así que puedes llevar desde unos gramos hasta varios kilos. Pagas solo por lo que usas.'
-						}
-					},
-					{
-						'@type': 'Question',
-						name: '¿Cómo garantizan la frescura de los productos?',
-						acceptedAnswer: {
-							'@type': 'Answer',
-							text: 'Trabajamos con rotación constante y compras frecuentes a nuestros proveedores. Los granos y frutos secos se almacenan en condiciones controladas para conservar aroma y propiedades.'
-						}
-					},
-					{
-						'@type': 'Question',
-						name: '¿Tienen opciones para dietas especiales?',
-						acceptedAnswer: {
-							'@type': 'Answer',
-							text: 'Contamos con cereales integrales, semillas, legumbres y frutos secos naturales, ideales para dietas veganas, sin gluten o altas en proteína. Pregúntanos y te orientamos.'
-						}
-					},
-					{
-						'@type': 'Question',
-						name: '¿Hacen pedidos o entregas?',
-						acceptedAnswer: {
-							'@type': 'Answer',
-							text: 'Puedes encargar tu pedido y pasar a recogerlo en La Despensa de la 21. Escríbenos para coordinar disponibilidad y cantidades.'
-						}
-					}
-				]
+				mainEntity: faqs.map((faq) => ({
+					'@type': 'Question',
+					name: faq.q,
+					acceptedAnswer: { '@type': 'Answer', text: faq.a }
+				}))
 			}
 		]
 	};
@@ -108,7 +84,7 @@
 		name="keywords"
 		content="frutos secos Ibagué, granos a granel, condimentos, especias, semillas, productos a granel Ibagué, despensa de la 21, almendras, nueces, legumbres"
 	/>
-	<meta name="theme-color" content="#2a1245" />
+	<meta name="theme-color" content="#0d0612" />
 
 	<!-- Geolocalización para SEO local -->
 	<meta name="geo.region" content="CO-TOL" />
@@ -139,11 +115,15 @@
 
 <main>
 	<Hero />
-	<Categories />
-	<About />
-	<Benefits />
+	<Manifesto />
+	<Pantry />
+	<Audiences />
+	<OrderBuilder />
+	<Essence />
+	<Process />
 	<Faq />
 	<Visit />
 </main>
 
 <Footer />
+<MobileOrderBar />

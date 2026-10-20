@@ -1,0 +1,521 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T13:18:05.608795+00:00",
+  "title": "Design System: Esencia & Grano",
+  "extensions": {
+    "colorMeta": {
+      "night": {
+        "role": "neutral",
+        "displayName": "Aubergine Night",
+        "canonical": "oklch(0.14 0.035 315)",
+        "tonalRamp": [
+          "oklch(0.15 0.035 315)",
+          "oklch(0.26 0.035 315)",
+          "oklch(0.37 0.035 315)",
+          "oklch(0.48 0.035 315)",
+          "oklch(0.6 0.035 315)",
+          "oklch(0.72 0.035 315)",
+          "oklch(0.84 0.035 315)",
+          "oklch(0.95 0.035 315)"
+        ]
+      },
+      "night-2": {
+        "role": "neutral",
+        "displayName": "Night Raised",
+        "canonical": "oklch(0.18 0.055 312)",
+        "tonalRamp": [
+          "oklch(0.15 0.055 312)",
+          "oklch(0.26 0.055 312)",
+          "oklch(0.37 0.055 312)",
+          "oklch(0.48 0.055 312)",
+          "oklch(0.6 0.055 312)",
+          "oklch(0.72 0.055 312)",
+          "oklch(0.84 0.055 312)",
+          "oklch(0.95 0.055 312)"
+        ]
+      },
+      "night-3": {
+        "role": "neutral",
+        "displayName": "Night High",
+        "canonical": "oklch(0.23 0.075 308)",
+        "tonalRamp": [
+          "oklch(0.15 0.075 308)",
+          "oklch(0.26 0.075 308)",
+          "oklch(0.37 0.075 308)",
+          "oklch(0.48 0.075 308)",
+          "oklch(0.6 0.075 308)",
+          "oklch(0.72 0.075 308)",
+          "oklch(0.84 0.075 308)",
+          "oklch(0.95 0.075 308)"
+        ]
+      },
+      "night-line": {
+        "role": "neutral",
+        "displayName": "Night Hairline",
+        "canonical": "oklch(0.96 0.012 70 / 0.12)",
+        "tonalRamp": [
+          "oklch(0.15 0.012 70)",
+          "oklch(0.26 0.012 70)",
+          "oklch(0.37 0.012 70)",
+          "oklch(0.48 0.012 70)",
+          "oklch(0.6 0.012 70)",
+          "oklch(0.72 0.012 70)",
+          "oklch(0.84 0.012 70)",
+          "oklch(0.95 0.012 70)"
+        ]
+      },
+      "ivory": {
+        "role": "neutral",
+        "displayName": "Ivory",
+        "canonical": "oklch(0.965 0.012 70)",
+        "tonalRamp": [
+          "oklch(0.15 0.012 70)",
+          "oklch(0.26 0.012 70)",
+          "oklch(0.37 0.012 70)",
+          "oklch(0.48 0.012 70)",
+          "oklch(0.6 0.012 70)",
+          "oklch(0.72 0.012 70)",
+          "oklch(0.84 0.012 70)",
+          "oklch(0.95 0.012 70)"
+        ]
+      },
+      "ivory-dim": {
+        "role": "neutral",
+        "displayName": "Ivory Dim",
+        "canonical": "oklch(0.82 0.03 310)",
+        "tonalRamp": [
+          "oklch(0.15 0.03 310)",
+          "oklch(0.26 0.03 310)",
+          "oklch(0.37 0.03 310)",
+          "oklch(0.48 0.03 310)",
+          "oklch(0.6 0.03 310)",
+          "oklch(0.72 0.03 310)",
+          "oklch(0.84 0.03 310)",
+          "oklch(0.95 0.03 310)"
+        ]
+      },
+      "ivory-mute": {
+        "role": "neutral",
+        "displayName": "Ivory Mute",
+        "canonical": "oklch(0.7 0.04 310)",
+        "tonalRamp": [
+          "oklch(0.15 0.04 310)",
+          "oklch(0.26 0.04 310)",
+          "oklch(0.37 0.04 310)",
+          "oklch(0.48 0.04 310)",
+          "oklch(0.6 0.04 310)",
+          "oklch(0.72 0.04 310)",
+          "oklch(0.84 0.04 310)",
+          "oklch(0.95 0.04 310)"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Key-Light Gold",
+        "canonical": "oklch(0.79 0.135 76)",
+        "tonalRamp": [
+          "oklch(0.15 0.135 76)",
+          "oklch(0.26 0.135 76)",
+          "oklch(0.37 0.135 76)",
+          "oklch(0.48 0.135 76)",
+          "oklch(0.6 0.135 76)",
+          "oklch(0.72 0.135 76)",
+          "oklch(0.84 0.135 76)",
+          "oklch(0.95 0.135 76)"
+        ]
+      },
+      "gold-strong": {
+        "role": "primary",
+        "displayName": "Deep Gold",
+        "canonical": "oklch(0.72 0.14 70)",
+        "tonalRamp": [
+          "oklch(0.15 0.14 70)",
+          "oklch(0.26 0.14 70)",
+          "oklch(0.37 0.14 70)",
+          "oklch(0.48 0.14 70)",
+          "oklch(0.6 0.14 70)",
+          "oklch(0.72 0.14 70)",
+          "oklch(0.84 0.14 70)",
+          "oklch(0.95 0.14 70)"
+        ]
+      },
+      "gold-ink": {
+        "role": "primary",
+        "displayName": "Gold Ink",
+        "canonical": "oklch(0.2 0.06 312)",
+        "tonalRamp": [
+          "oklch(0.15 0.06 312)",
+          "oklch(0.26 0.06 312)",
+          "oklch(0.37 0.06 312)",
+          "oklch(0.48 0.06 312)",
+          "oklch(0.6 0.06 312)",
+          "oklch(0.72 0.06 312)",
+          "oklch(0.84 0.06 312)",
+          "oklch(0.95 0.06 312)"
+        ]
+      },
+      "magenta": {
+        "role": "secondary",
+        "displayName": "Live Magenta",
+        "canonical": "oklch(0.6 0.24 356)",
+        "tonalRamp": [
+          "oklch(0.15 0.24 356)",
+          "oklch(0.26 0.24 356)",
+          "oklch(0.37 0.24 356)",
+          "oklch(0.48 0.24 356)",
+          "oklch(0.6 0.24 356)",
+          "oklch(0.72 0.24 356)",
+          "oklch(0.84 0.24 356)",
+          "oklch(0.95 0.24 356)"
+        ]
+      },
+      "olive": {
+        "role": "tertiary",
+        "displayName": "Process Olive",
+        "canonical": "oklch(0.62 0.12 128)",
+        "tonalRamp": [
+          "oklch(0.15 0.12 128)",
+          "oklch(0.26 0.12 128)",
+          "oklch(0.37 0.12 128)",
+          "oklch(0.48 0.12 128)",
+          "oklch(0.6 0.12 128)",
+          "oklch(0.72 0.12 128)",
+          "oklch(0.84 0.12 128)",
+          "oklch(0.95 0.12 128)"
+        ]
+      },
+      "violet": {
+        "role": "tertiary",
+        "displayName": "Night Violet",
+        "canonical": "oklch(0.52 0.2 302)",
+        "tonalRamp": [
+          "oklch(0.15 0.2 302)",
+          "oklch(0.26 0.2 302)",
+          "oklch(0.37 0.2 302)",
+          "oklch(0.48 0.2 302)",
+          "oklch(0.6 0.2 302)",
+          "oklch(0.72 0.2 302)",
+          "oklch(0.84 0.2 302)",
+          "oklch(0.95 0.2 302)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Lilac Paper",
+        "canonical": "oklch(0.975 0.01 310)",
+        "tonalRamp": [
+          "oklch(0.15 0.01 310)",
+          "oklch(0.26 0.01 310)",
+          "oklch(0.37 0.01 310)",
+          "oklch(0.48 0.01 310)",
+          "oklch(0.6 0.01 310)",
+          "oklch(0.72 0.01 310)",
+          "oklch(0.84 0.01 310)",
+          "oklch(0.95 0.01 310)"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Paper Shade",
+        "canonical": "oklch(0.94 0.018 310)",
+        "tonalRamp": [
+          "oklch(0.15 0.018 310)",
+          "oklch(0.26 0.018 310)",
+          "oklch(0.37 0.018 310)",
+          "oklch(0.48 0.018 310)",
+          "oklch(0.6 0.018 310)",
+          "oklch(0.72 0.018 310)",
+          "oklch(0.84 0.018 310)",
+          "oklch(0.95 0.018 310)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Aubergine Ink",
+        "canonical": "oklch(0.21 0.055 312)",
+        "tonalRamp": [
+          "oklch(0.15 0.055 312)",
+          "oklch(0.26 0.055 312)",
+          "oklch(0.37 0.055 312)",
+          "oklch(0.48 0.055 312)",
+          "oklch(0.6 0.055 312)",
+          "oklch(0.72 0.055 312)",
+          "oklch(0.84 0.055 312)",
+          "oklch(0.95 0.055 312)"
+        ]
+      },
+      "ink-dim": {
+        "role": "neutral",
+        "displayName": "Ink Dim",
+        "canonical": "oklch(0.43 0.05 310)",
+        "tonalRamp": [
+          "oklch(0.15 0.05 310)",
+          "oklch(0.26 0.05 310)",
+          "oklch(0.37 0.05 310)",
+          "oklch(0.48 0.05 310)",
+          "oklch(0.6 0.05 310)",
+          "oklch(0.72 0.05 310)",
+          "oklch(0.84 0.05 310)",
+          "oklch(0.95 0.05 310)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "mega": {
+        "displayName": "Mega",
+        "purpose": "Closing statement and hero headline scale."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Every chapter heading; two clauses, second a tier quieter."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Family names inside pantry cards."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Paragraph under a chapter heading, about 34-36rem wide."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Supporting copy with ss01/cv11."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Sentence-case fieldset legends and form labels; never a kicker."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hairline-ring",
+        "value": "0 0 0 1px var(--night-line)",
+        "purpose": "Ghost pill, night chips, card edges; ink at 12-20% on paper."
+      },
+      {
+        "name": "night-fall",
+        "value": "0 0 0 1px var(--night-line), 0 16px 40px -20px oklch(0.05 0.02 310 / 0.9)",
+        "purpose": "Scrolled nav and open mobile menu."
+      },
+      {
+        "name": "stack-fall",
+        "value": "0 0 0 1px var(--night-line), 0 -30px 60px -30px oklch(0.05 0.02 310 / 0.9)",
+        "purpose": "Sticky stacked pantry cards."
+      },
+      {
+        "name": "gold-pill",
+        "value": "0 1px 0 oklch(1 0 0 / 0.35) inset, 0 10px 24px -10px oklch(0.08 0.03 310 / 0.9)",
+        "purpose": "Lit top edge and soft drop of the primary action."
+      },
+      {
+        "name": "paper-lift",
+        "value": "0 1px 2px oklch(0.21 0.055 312 / 0.06), 0 24px 60px -28px oklch(0.21 0.055 312 / 0.35)",
+        "purpose": "Order ticket on paper."
+      },
+      {
+        "name": "material-night",
+        "value": "background: oklch(0.14 0.035 315 / 0.72); backdrop-filter: blur(20px) saturate(160%)",
+        "purpose": "Nav over night; opaque night under prefers-reduced-transparency."
+      },
+      {
+        "name": "tone-paper",
+        "value": "background: oklch(0.975 0.01 310 / 0.82); backdrop-filter: blur(20px) saturate(160%); box-shadow: 0 0 0 1px oklch(0.21 0.055 312 / 0.1)",
+        "purpose": "Nav over paper chapters; opaque paper under prefers-reduced-transparency."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-strong",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Default curve: reveals, hero entrance, pill press, chips, segmented thumb, accordion chevron."
+      },
+      {
+        "name": "ease-in-out-strong",
+        "value": "cubic-bezier(0.77, 0, 0.175, 1)",
+        "purpose": "Scroll nudge loop (2.4s)."
+      },
+      {
+        "name": "ease-drawer",
+        "value": "cubic-bezier(0.32, 0.72, 0, 1)",
+        "purpose": "Defined for drawer-like sheets."
+      },
+      {
+        "name": "press",
+        "value": "scale(0.97) 160ms ease-out-strong",
+        "purpose": "Pills; chips use scale(0.96)."
+      },
+      {
+        "name": "reveal",
+        "value": "translateY(24px) blur(6px) -> none, 900ms ease-out-strong, once",
+        "purpose": "Content on enter; reduced motion: opacity 300ms."
+      },
+      {
+        "name": "hero-in",
+        "value": "translateY(28px) blur(10px) -> none, 1200ms, 110ms steps + 150ms",
+        "purpose": "Hero load sequence; image: scale 1.08, blur 14px, brightness 0.6, 1800ms. Reduced motion: 500ms fade."
+      },
+      {
+        "name": "scroll-progress",
+        "value": "--progress 0..1, modes through | sticky",
+        "purpose": "Shared single-rAF scroll engine; pinned to 1 under reduced motion."
+      },
+      {
+        "name": "parallax",
+        "value": "translate3d(0, offset * speed, 0); speeds -0.12 (pantry), -0.18 (essence)",
+        "purpose": "Off under reduced motion."
+      },
+      {
+        "name": "word-light",
+        "value": "opacity clamp(0.14, progress*(words+4) - i, 1)",
+        "purpose": "Manifesto words light with scroll; all lit under reduced motion."
+      },
+      {
+        "name": "spice-dust",
+        "value": "canvas, 22/44 motes, 80% gold / 20% magenta, DPR <= 1.5",
+        "purpose": "Hero atmosphere; one still frame under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Gold Pill",
+      "kind": "button",
+      "refersTo": "pill-gold",
+      "description": "The one primary action: every WhatsApp order path.",
+      "html": "<a class=\"ds-pill-gold\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.7-1.1-4.5-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z\"/></svg>Pide por WhatsApp</a>",
+      "css": ".ds-pill-gold{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:.625rem;height:3.25rem;padding:0 1.625rem;border-radius:999px;background:var(--gold,oklch(0.79 0.135 76));color:var(--gold-ink,oklch(0.2 0.06 312));font-weight:600;font-size:1rem;letter-spacing:-0.01em;text-decoration:none;white-space:nowrap;box-shadow:0 1px 0 oklch(1 0 0 / .35) inset,0 10px 24px -10px oklch(0.08 0.03 310 / .9);transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 200ms ease}.ds-pill-gold:hover{background:oklch(0.83 0.13 78)}.ds-pill-gold:active{transform:scale(.97)}.ds-pill-gold:focus-visible{outline:2px solid oklch(0.79 0.135 76);outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Pill",
+      "kind": "button",
+      "refersTo": "pill-ghost",
+      "description": "Secondary path on night: hairline ring, ivory text.",
+      "html": "<div class=\"ds-night\"><a class=\"ds-pill-ghost\" href=\"#\">Recorre la despensa</a></div>",
+      "css": ".ds-night{background:oklch(0.14 0.035 315);padding:1.5rem}.ds-pill-ghost{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;height:3.25rem;padding:0 1.375rem;border-radius:999px;color:oklch(0.965 0.012 70);font-weight:500;text-decoration:none;box-shadow:0 0 0 1px oklch(0.96 0.012 70 / .12) inset;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 200ms ease}.ds-pill-ghost:hover{background:oklch(0.96 0.012 70 / .06)}.ds-pill-ghost:active{transform:scale(.97)}.ds-pill-ghost:focus-visible{outline:2px solid oklch(0.79 0.135 76);outline-offset:3px}"
+    },
+    {
+      "name": "Product Chip",
+      "kind": "chip",
+      "refersTo": "chip-product-paper",
+      "description": "Toggle a product into the order; selected turns live magenta.",
+      "html": "<div class=\"ds-paper\"><button class=\"ds-chip\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg>Comino</button> <button class=\"ds-chip ds-chip-on\" aria-pressed=\"true\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>Almendras</button></div>",
+      "css": ".ds-paper{background:oklch(0.975 0.01 310);padding:1.5rem;display:flex;gap:.5rem}.ds-chip{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;display:inline-flex;align-items:center;gap:.375rem;height:2.75rem;padding:0 1rem 0 .75rem;border:0;border-radius:999px;background:#fff;color:oklch(0.21 0.055 312);font-size:.95rem;font-weight:500;cursor:pointer;box-shadow:0 0 0 1px oklch(0.21 0.055 312 / .12);transition:background-color 200ms cubic-bezier(0.23,1,0.32,1),color 200ms cubic-bezier(0.23,1,0.32,1),box-shadow 200ms cubic-bezier(0.23,1,0.32,1),transform 200ms cubic-bezier(0.23,1,0.32,1)}.ds-chip:hover{box-shadow:0 0 0 1px oklch(0.21 0.055 312 / .35)}.ds-chip:active{transform:scale(.96)}.ds-chip:focus-visible{outline:2px solid oklch(0.79 0.135 76);outline-offset:3px}.ds-chip-on,.ds-chip-on:hover{background:oklch(0.6 0.24 356);color:#fff;box-shadow:0 0 0 1px oklch(0.6 0.24 356)}"
+    },
+    {
+      "name": "Paper Input",
+      "kind": "input",
+      "refersTo": "input-paper",
+      "description": "Free-text product entry with ink submit pill.",
+      "html": "<div class=\"ds-paper\"><input class=\"ds-input\" placeholder=\"Ej.: chía, maní…\"><button class=\"ds-ink-pill\">Añadir</button></div>",
+      "css": ".ds-paper{background:oklch(0.975 0.01 310);padding:1.5rem;display:flex;gap:.5rem;max-width:28rem}.ds-input{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;flex:1;min-width:0;height:3rem;padding:0 1.25rem;border:0;border-radius:999px;background:#fff;color:oklch(0.21 0.055 312);font-size:1rem;outline:none;box-shadow:0 0 0 1px oklch(0.21 0.055 312 / .15);transition:box-shadow 150ms ease}.ds-input::placeholder{color:oklch(0.43 0.05 310)}.ds-input:focus{box-shadow:0 0 0 2px oklch(0.21 0.055 312)}.ds-ink-pill{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;height:3rem;padding:0 1.25rem;border:0;border-radius:999px;background:oklch(0.21 0.055 312);color:oklch(0.975 0.01 310);font-size:.875rem;font-weight:600;cursor:pointer;transition:transform 150ms ease}.ds-ink-pill:active{transform:scale(.97)}.ds-ink-pill:focus-visible{outline:2px solid oklch(0.79 0.135 76);outline-offset:3px}"
+    },
+    {
+      "name": "Floating Nav",
+      "kind": "nav",
+      "refersTo": "nav-bar",
+      "description": "Pill bar in material-night once scrolled; permanent gold order pill.",
+      "html": "<div class=\"ds-stage\"><nav class=\"ds-nav\"><span class=\"ds-brand\"><span class=\"ds-logo\"></span>Esencia <b>&amp;</b> Grano</span><span class=\"ds-links\"><a href=\"#\">La despensa</a><a href=\"#\">Arma tu pedido</a></span><a class=\"ds-nav-cta\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.7-1.1-4.5-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z\"/></svg>Pedir</a></nav></div>",
+      "css": ".ds-stage{background:radial-gradient(60% 80% at 20% 0%,oklch(0.79 0.135 76 / .14),transparent 70%),oklch(0.14 0.035 315);padding:1rem}.ds-nav{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;display:flex;align-items:center;justify-content:space-between;height:4rem;padding:0 .5rem 0 .625rem;border-radius:999px;background:oklch(0.14 0.035 315 / .72);backdrop-filter:blur(20px) saturate(160%);box-shadow:0 0 0 1px oklch(0.96 0.012 70 / .12),0 16px 40px -20px oklch(0.05 0.02 310 / .9)}.ds-brand{display:flex;align-items:center;gap:.625rem;color:oklch(0.965 0.012 70);font-weight:600;letter-spacing:-0.02em}.ds-brand b{color:oklch(0.79 0.135 76);font-weight:600}.ds-logo{width:2.75rem;height:2.75rem;border-radius:999px;background:oklch(0.965 0.012 70)}.ds-links a{padding:.5rem .875rem;border-radius:999px;font-size:.875rem;color:oklch(0.82 0.03 310);text-decoration:none;transition:color 200ms}.ds-links a:hover{color:oklch(0.965 0.012 70)}.ds-nav-cta{display:inline-flex;align-items:center;gap:.5rem;height:2.75rem;padding:0 1rem;border-radius:999px;background:oklch(0.79 0.135 76);color:oklch(0.2 0.06 312);font-size:.875rem;font-weight:600;text-decoration:none;transition:transform 150ms cubic-bezier(0.23,1,0.32,1)}.ds-nav-cta:active{transform:scale(.97)}.ds-nav a:focus-visible{outline:2px solid oklch(0.79 0.135 76);outline-offset:3px}"
+    },
+    {
+      "name": "Order Ticket",
+      "kind": "card",
+      "refersTo": "ticket-card",
+      "description": "White ticket on paper with grams segmented control and total.",
+      "html": "<div class=\"ds-paper\"><div class=\"ds-ticket\"><div class=\"ds-row\"><strong>Tu pedido</strong><span>1 producto</span></div><p class=\"ds-item\">Almendras</p><div class=\"ds-seg\"><span class=\"ds-thumb\"></span><button>100</button><button aria-pressed=\"true\">250</button><button>500</button><button>1 kg</button></div><div class=\"ds-row ds-total\"><span>Total aproximado</span><b>250 g</b></div></div></div>",
+      "css": ".ds-paper{background:oklch(0.975 0.01 310);padding:1.5rem}.ds-ticket{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;max-width:22rem;padding:1.75rem;border-radius:1.75rem;background:#fff;color:oklch(0.21 0.055 312);box-shadow:0 1px 2px oklch(0.21 0.055 312 / .06),0 24px 60px -28px oklch(0.21 0.055 312 / .35)}.ds-row{display:flex;justify-content:space-between;align-items:baseline}.ds-row strong{font-size:1.25rem;letter-spacing:-0.025em}.ds-row span{font-size:.875rem;color:oklch(0.43 0.05 310)}.ds-item{margin:1.25rem 0 .625rem;font-weight:500}.ds-seg{position:relative;display:grid;grid-template-columns:repeat(4,1fr);padding:.25rem;border-radius:999px;background:oklch(0.94 0.018 310)}.ds-thumb{position:absolute;top:.25rem;bottom:.25rem;left:.25rem;width:calc((100% - .5rem)/4);border-radius:999px;background:#fff;box-shadow:0 1px 3px oklch(0.21 0.055 312 / .18);transform:translateX(100%);transition:transform 300ms cubic-bezier(0.23,1,0.32,1)}.ds-seg button{position:relative;z-index:1;height:2.25rem;border:0;background:none;border-radius:999px;font:500 .875rem/1 inherit;color:oklch(0.43 0.05 310);cursor:pointer}.ds-seg button:hover,.ds-seg button[aria-pressed=true]{color:oklch(0.21 0.055 312)}.ds-seg button:focus-visible{outline:2px solid oklch(0.79 0.135 76)}.ds-total{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid oklch(0.21 0.055 312 / .1)}.ds-total b{font-size:1.5rem;letter-spacing:-0.03em}"
+    },
+    {
+      "name": "Family Card",
+      "kind": "card",
+      "refersTo": "family-card",
+      "description": "Sticky pantry sheet on night; photo dissolves into the text side, never boxed.",
+      "html": "<div class=\"ds-night\"><article class=\"ds-family\"><div class=\"ds-photo\"></div><div class=\"ds-copy\"><h3>Frutos secos</h3><p>Almendras, marañones, nueces.</p></div></article></div>",
+      "css": ".ds-night{background:oklch(0.14 0.035 315);padding:1.5rem}.ds-family{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;position:relative;overflow:hidden;min-height:16rem;border-radius:2rem;background:oklch(0.18 0.055 312);box-shadow:0 0 0 1px oklch(0.96 0.012 70 / .12),0 -30px 60px -30px oklch(0.05 0.02 310 / .9)}.ds-photo{position:absolute;inset:0 0 0 34%;background:radial-gradient(circle at 60% 50%,oklch(0.6 0.12 60),oklch(0.3 0.08 40));-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 42%);mask-image:linear-gradient(to right,transparent 0%,#000 42%)}.ds-copy{position:relative;max-width:46%;padding:2.5rem;color:oklch(0.82 0.03 310)}.ds-copy h3{margin:0;color:oklch(0.965 0.012 70);font-size:2.25rem;line-height:1.02;letter-spacing:-0.032em;font-weight:600}.ds-copy p{margin:.75rem 0 0;font-size:1.125rem}"
+    },
+    {
+      "name": "Chapter Heading",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "Two-clause display heading on key-light night; second clause drops a tier.",
+      "html": "<section class=\"ds-key\"><h2 class=\"ds-display\">Tres familias. <span>Una sola obsesión por el sabor.</span></h2></section>",
+      "css": ".ds-key{padding:3rem 1.5rem;background:radial-gradient(60% 55% at 20% 40%,oklch(0.79 0.135 76 / .12) 0%,transparent 70%),radial-gradient(55% 55% at 95% 75%,oklch(0.52 0.2 302 / .2) 0%,transparent 70%),oklch(0.14 0.035 315)}.ds-display{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;margin:0;max-width:40rem;font-size:clamp(2.6rem,6.4vw,5.75rem);line-height:.96;letter-spacing:-0.04em;font-weight:600;color:oklch(0.965 0.012 70);text-wrap:balance}.ds-display span{color:oklch(0.7 0.04 310)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Pantry at Night, Under One Light",
+    "overview": "The ingredient is the hero, lit like a product launch. The ground is an aubergine night; a single warm gold key light falls across it and is the only warm source on the page, which is why the same gold is also the primary action. The page moves as cinematic chapters: long dark chapters for showing (still lifes, the manifesto, the store) alternate with quiet lilac-white paper chapters for reading and doing (audiences, the order builder, the process). Every chapter ends in a path to WhatsApp.\n\nDensity is low and the scale is large: display type at 6 to 10vw, generous chapter padding, one idea per viewport. Photography is never boxed; it bleeds under text and dissolves into the night through masks. The current stills are illustrative AI imagery standing in for the owner's real photographs; real photos replace them under the same treatment, and none may be presented as the store itself. Motion is scroll-linked and calm (scale, opacity, word-by-word light, parallax), with strong ease-out curves and no bounce. The rejected world, confirmed in the direction contract, is the cream-and-kraft organic grocery and the row of equal category cards.",
+    "keyCharacteristics": [
+      "Aubergine night ground, one gold key light, ivory text in three tiers.",
+      "Night chapters for showing, paper chapters for reading and ordering.",
+      "Geist at display scale with negative tracking that tightens as size grows, floored at -0.04em.",
+      "Pill-shaped controls everywhere; hairline rules instead of boxes.",
+      "Images dissolve into the dark; they never sit in a framed rectangle.",
+      "Scroll-linked chapters with reduced-motion equivalents for every effect."
+    ],
+    "rules": [
+      {
+        "name": "The One Light Rule",
+        "body": "Gold is the only warm colour and it means \"light\" or \"act\". If it is not lighting a word or inviting a WhatsApp order, it is not gold.",
+        "section": "colors"
+      },
+      {
+        "name": "The Live Magenta Rule",
+        "body": "Magenta marks something the visitor has just made true (a selected product). It never decorates.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Ivories Rule",
+        "body": "Text on night uses exactly three tiers: ivory for what you read first, ivory-dim for what you read next, ivory-mute for the aside. A headline's second clause drops a tier instead of changing colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tracking Floor Rule",
+        "body": "Tracking tightens as size grows (-0.01em lede, -0.02em small headings, -0.03em titles, -0.04em display and mega) and never goes past -0.04em.",
+        "section": "typography"
+      },
+      {
+        "name": "The Two-Clause Headline Rule",
+        "body": "Chapter headings are a statement and a quieter second clause in the next text tier, not a headline plus a kicker.",
+        "section": "typography"
+      },
+      {
+        "name": "The Light Is the Depth Rule",
+        "body": "A dark chapter gets depth from the key-light glow and from images dissolving into night, not from more shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** make gold the only warm colour and the only primary-action fill; put gold-ink text on it.",
+      "**Do** reserve magenta for selected or live state, olive for the process timeline, violet for atmospheric glow.",
+      "**Do** alternate night chapters (showing) and paper chapters (reading, ordering), and fade night chapter edges back to night.",
+      "**Do** set display type in Geist at 600 to 620 with tracking tightening by size, never past -0.04em.",
+      "**Do** dissolve every photograph into the night with a mask (`dissolve-top`, `fade-into-card`, `fade-vertical`).",
+      "**Do** use full pills for controls and hairline rules for division.",
+      "**Do** drive cinematic motion from the shared scroll engine with strong ease-out, and ship a reduced-motion equivalent for each effect.",
+      "**Do** give every translucent material an opaque fallback under `prefers-reduced-transparency`."
+    ],
+    "donts": [
+      "**Don't** use gold for decoration, borders or secondary buttons; the ghost pill carries the secondary path.",
+      "**Don't** put a photograph in a hard-edged box or frame on night.",
+      "**Don't** build rows of equal category cards or a cream-and-kraft grocery palette.",
+      "**Don't** add a kicker or uppercase eyebrow above a heading; drop the second clause a text tier instead.",
+      "**Don't** introduce bounce or overshoot easing; motion settles, it does not spring past.",
+      "**Don't** add new hues; the palette is night, paper, ivory/ink tiers, gold, magenta, olive and atmospheric violet."
+    ]
+  }
+}

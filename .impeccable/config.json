@@ -1,0 +1,63 @@
+{
+  "buildPath": "code",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "src/app.css"
+        ],
+        "createdAt": "2026-10-20T12:47:38.439Z",
+        "reason": "user confirmed: la paleta debe partir del logo (morado, magenta, oro), respuesta Base del logo en el brief"
+      },
+      {
+        "rule": "nested-cards",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/model-pick.html"
+        ],
+        "createdAt": "2026-10-20T12:52:43.906Z",
+        "reason": "decision-round sketch of a rejected direction; not shipped"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-10-20T12:52:43.967Z",
+        "reason": "decision-round sketch (canon card) of the logo palette the user pinned; not shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-10-20T13:19:09.575Z",
+        "reason": "decision-round sketch of a rejected direction; not shipped, predates DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/model-pick.html"
+        ],
+        "createdAt": "2026-10-20T13:19:09.588Z",
+        "reason": "decision-round sketch of a rejected direction; not shipped, predates DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-10-20T13:19:09.600Z",
+        "reason": "decision-round sketch of a rejected direction; not shipped, predates DESIGN.md"
+      }
+    ]
+  }
+}
