@@ -2,6 +2,14 @@
 
 export const faqs = [
 	{
+		q: '¿Dónde queda Esencia & Grano y cuál es su horario?',
+		a: 'Estamos en la Plaza de la 21 de Ibagué, Tolima. Abrimos de lunes a sábado de 8:00 a 20:00. También puedes pedir por WhatsApp al 301 595 5518.'
+	},
+	{
+		q: '¿Qué productos venden a granel?',
+		a: 'Más de 120 productos: condimentos y especias (pimentón ahumado, comino, curry, orégano), granos y legumbres (lentejas, garbanzos, arroz integral, quinua), semillas y frutos secos (almendras, nueces, pistachos, arándanos).'
+	},
+	{
 		q: '¿Puedo comprar la cantidad exacta que necesito?',
 		a: 'Sí. Todo se vende a granel, así que puedes llevar desde unos gramos hasta varios kilos. Pagas solo por lo que usas.'
 	},

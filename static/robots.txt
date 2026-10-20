@@ -1,5 +1,51 @@
-# Esencia & Grano — permitir rastreo completo
+# Esencia & Grano — https://esenciaygrano.com/
+# Política: el sitio es público y queremos que buscadores y asistentes de IA
+# lo encuentren, lo citen y lo resuman con datos correctos.
+
+# Buscadores
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Búsqueda con IA (descubrimiento y citas)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Consultas que hace un asistente cuando un usuario lo pide
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Entrenamiento y grounding de modelos (permitido: ayuda a que la IA conozca el negocio)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Resto de agentes
 User-agent: *
 Allow: /
 
 Sitemap: https://esenciaygrano.com/sitemap.xml
+
+# Resumen para asistentes de IA: https://esenciaygrano.com/llms.txt

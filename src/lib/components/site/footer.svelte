@@ -1,6 +1,13 @@
 <script lang="ts">
 	import logo from '$lib/assets/logo-160.webp';
-	import { address_line, opening_hours, phone_display, phone_href, whatsapp_url } from '$lib/site';
+	import {
+		address_line,
+		content_updated,
+		opening_hours,
+		phone_display,
+		phone_href,
+		whatsapp_url
+	} from '$lib/site';
 
 	const links = [
 		{ label: 'La despensa', href: '#despensa' },
@@ -10,6 +17,12 @@
 		{ label: 'Visítanos', href: '#visitanos' }
 	];
 	const year = new Date().getFullYear();
+	const updated_label = new Intl.DateTimeFormat('es-CO', {
+		day: 'numeric',
+		month: 'long',
+		year: 'numeric',
+		timeZone: 'UTC'
+	}).format(new Date(content_updated));
 </script>
 
 <footer class="relative overflow-hidden bg-night pt-16 pb-28 sm:pb-12">
@@ -80,7 +93,10 @@
 			class="mt-8 flex flex-col gap-2 text-sm text-ivory-mute sm:flex-row sm:items-center sm:justify-between"
 		>
 			<p>© {year} Esencia & Grano · La Despensa de la 21.</p>
-			<p>Imágenes de producto ilustrativas.</p>
+			<p>
+				Información actualizada el <time datetime={content_updated}>{updated_label}</time>. Imágenes
+				de producto ilustrativas.
+			</p>
 		</div>
 	</div>
 </footer>

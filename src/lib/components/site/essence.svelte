@@ -3,6 +3,7 @@
 	import granel_640 from '$lib/assets/img/granel-640.webp';
 	import { parallax, scroll_progress } from '$lib/actions/scroll';
 	import { reveal } from '$lib/actions/reveal';
+	import { business_definition } from '$lib/site';
 </script>
 
 <!-- La foto se abre de un marco redondeado a pantalla completa mientras se recorre -->
@@ -16,6 +17,10 @@
 		<h2 id="essence-title" use:reveal class="type-display max-w-4xl text-ivory">
 			Seleccionamos cada lote <span class="text-ivory-mute">antes de que llegue a tus manos.</span>
 		</h2>
+		<!-- Definición autónoma: el párrafo que citan los buscadores con IA -->
+		<p use:reveal={{ delay: 60 }} class="type-lede mt-7 max-w-3xl text-ivory-dim">
+			{business_definition}
+		</p>
 	</div>
 
 	<div

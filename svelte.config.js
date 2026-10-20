@@ -19,6 +19,10 @@ const config = {
 		// El workflow define BASE_PATH=/esenciaygrano al compilar.
 		paths: {
 			base: process.env.BASE_PATH || ''
+		},
+		// Rutas generadas que no se enlazan desde la página: hay que declararlas para prerenderizarlas.
+		prerender: {
+			entries: ['*', '/sitemap.xml', '/llms.txt', '/llms-full.txt']
 		}
 	}
 };

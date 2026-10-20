@@ -11,104 +11,76 @@
 	import Visit from '$lib/components/site/visit.svelte';
 	import Footer from '$lib/components/site/footer.svelte';
 	import MobileOrderBar from '$lib/components/site/mobile-order-bar.svelte';
+	import hero_828 from '$lib/assets/img/hero-828.webp';
+	import hero_1280 from '$lib/assets/img/hero-1280.webp';
+	import hero_2048 from '$lib/assets/img/hero-2048.webp';
+	import geist_latin from '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url';
+	import { families } from '$lib/catalog';
 	import { faqs } from '$lib/faqs';
+	import { business_name, content_updated, site_url } from '$lib/site';
+	import { build_json_ld, page_description, page_title, serialize_json_ld } from '$lib/seo';
+	import { seo_images } from '$lib/seo-images';
 
-	const siteUrl = 'https://esenciaygrano.com';
-	const ogImage = `${siteUrl}/og-image.png`;
-	const title = 'Esencia & Grano · Frutos secos y granos a granel en Ibagué';
-	const description =
-		'Tienda a granel en Ibagué, Plaza de la 21: condimentos, especias, granos, semillas y frutos secos frescos y seleccionados. Pide por WhatsApp a domicilio o recoge en tienda. Tel. 301 595 5518.';
+	const og_image_alt =
+		'Esencia & Grano: frutos secos, especias y granos a granel en la Plaza de la 21, Ibagué';
 
-	// Datos estructurados (JSON-LD) para SEO local y resultados enriquecidos.
-	const jsonLd = {
-		'@context': 'https://schema.org',
-		'@graph': [
-			{
-				'@type': 'GroceryStore',
-				'@id': `${siteUrl}/#tienda`,
-				name: 'Esencia & Grano',
-				alternateName: 'La Despensa de la 21',
-				description,
-				url: siteUrl,
-				image: ogImage,
-				logo: ogImage,
-				telephone: '+573015955518',
-				priceRange: '$$',
-				currenciesAccepted: 'COP',
-				paymentAccepted: 'Efectivo, Transferencia, Nequi',
-				address: {
-					'@type': 'PostalAddress',
-					streetAddress: 'Plaza de la 21',
-					addressLocality: 'Ibagué',
-					addressRegion: 'Tolima',
-					addressCountry: 'CO'
-				},
-				areaServed: { '@type': 'City', name: 'Ibagué' },
-				openingHoursSpecification: [
-					{
-						'@type': 'OpeningHoursSpecification',
-						dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-						opens: '08:00',
-						closes: '20:00'
-					}
-				],
-				contactPoint: {
-					'@type': 'ContactPoint',
-					telephone: '+573015955518',
-					contactType: 'customer service',
-					availableLanguage: 'Spanish'
-				}
-			},
-			{
-				'@type': 'FAQPage',
-				'@id': `${siteUrl}/#preguntas`,
-				mainEntity: faqs.map((faq) => ({
-					'@type': 'Question',
-					name: faq.q,
-					acceptedAnswer: { '@type': 'Answer', text: faq.a }
-				}))
-			}
-		]
-	};
-
-	const jsonLdScript = `<script type="application/ld+json">${JSON.stringify(jsonLd)}<\/script>`;
+	// Datos estructurados (JSON-LD): grafo WebSite + WebPage + GroceryStore + FAQPage.
+	const json_ld_script = `<script type="application/ld+json">${serialize_json_ld(
+		build_json_ld(families, faqs, seo_images)
+	)}<\/script>`;
 </script>
 
 <svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
-	<link rel="canonical" href={siteUrl} />
-	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
-	<meta name="author" content="Esencia & Grano" />
+	<title>{page_title}</title>
+	<meta name="description" content={page_description} />
+	<link rel="canonical" href={site_url} />
 	<meta
-		name="keywords"
-		content="frutos secos Ibagué, granos a granel, condimentos, especias, semillas, productos a granel Ibagué, despensa de la 21, almendras, nueces, legumbres"
+		name="robots"
+		content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
 	/>
+	<meta name="author" content={business_name} />
 	<meta name="theme-color" content="#0d0612" />
+	<meta name="format-detection" content="telephone=yes" />
+	<link rel="alternate" type="text/plain" href="{site_url}llms.txt" title="Resumen para IA" />
+
+	<!-- Rendimiento: la imagen del hero y la fuente son el LCP -->
+	<link
+		rel="preload"
+		as="image"
+		href={hero_1280}
+		imagesrcset="{hero_828} 828w, {hero_1280} 1280w, {hero_2048} 2048w"
+		imagesizes="100vw"
+		fetchpriority="high"
+	/>
+	<link rel="preload" as="font" type="font/woff2" href={geist_latin} crossorigin="anonymous" />
 
 	<!-- Geolocalización para SEO local -->
 	<meta name="geo.region" content="CO-TOL" />
 	<meta name="geo.placename" content="Ibagué, Tolima" />
 
 	<!-- Open Graph -->
-	<meta property="og:site_name" content="Esencia & Grano" />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={description} />
+	<meta property="og:site_name" content={business_name} />
+	<meta property="og:title" content={page_title} />
+	<meta property="og:description" content={page_description} />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content={siteUrl} />
+	<meta property="og:url" content={site_url} />
 	<meta property="og:locale" content="es_CO" />
-	<meta property="og:image" content={ogImage} />
+	<meta property="og:updated_time" content={content_updated} />
+	<meta property="og:image" content={seo_images.og} />
+	<meta property="og:image:secure_url" content={seo_images.og} />
+	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="Esencia & Grano · La Despensa de la 21" />
+	<meta property="og:image:alt" content={og_image_alt} />
 
 	<!-- Twitter / X -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image" content={ogImage} />
+	<meta name="twitter:title" content={page_title} />
+	<meta name="twitter:description" content={page_description} />
+	<meta name="twitter:image" content={seo_images.og} />
+	<meta name="twitter:image:alt" content={og_image_alt} />
 
-	{@html jsonLdScript}
+	{@html json_ld_script}
 </svelte:head>
 
 <Navbar />
